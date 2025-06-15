@@ -6,6 +6,21 @@
 <title>Swiss Pension System: The Ultimate Infographic Guide</title>
 <style>
     /* --- Main Styles & GenZ Aesthetics --- */
+    .main-container {
+  width: 75vw;           /* 75% of viewport width */
+  max-width: 75%;        /* 75% of parent, for extra safety */
+  margin: 0 auto;        /* Center the container */
+  box-sizing: border-box;
+  padding: 1rem;         /* Optional: padding for inner spacing */
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 100vw;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}
     :root {
         --c-primary: #005A9E; /* Swiss Blue */
         --c-secondary: #D82E28; /* Swiss Red */
@@ -197,7 +212,7 @@
 </style>
 </head>
 <body>
-
+<div class="main-container">
 <div class="header">
     <h1>Your Swiss Pension System Deep Dive</h1>
     <p>All you need to know about your retirement in Switzerland. Simplified & Interactive.</p>
@@ -433,7 +448,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <script>
 function openTab(evt, tabName) {
     // Hide all tab content
