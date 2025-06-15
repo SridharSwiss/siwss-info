@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiss Pension System: The Ultimate Infographic Guide</title>
+<style>
+    /* --- Main Styles & GenZ Aesthetics --- */
+    :root {
+        --c-primary: #005A9E; /* Swiss Blue */
+        --c-secondary: #D82E28; /* Swiss Red */
+        --c-accent: #FFC300; /* Gold Accent */
+        --c-light: #F8F9FA;
+        --c-dark: #212529;
+        --c-text: #333;
+        --font-primary: 'Poppins', sans-serif;
+        --shadow-light: 0 4px 8px rgba(0,0,0,0.05);
+        --shadow-dark: 0 8px 16px rgba(0,0,0,0.1);
+        --border-radius: 12px;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+        font-family: var(--font-primary);
+        background-color: var(--c-light);
+        color: var(--c-text);
+        line-height: 1.7;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* --- Header & Title --- */
+    .header {
+        text-align: center;
+        padding: 30px 20px;
+        background: linear-gradient(135deg, var(--c-primary), var(--c-secondary));
+        color: white;
+        border-radius: var(--border-radius);
+        margin-bottom: 25px;
+        box-shadow: var(--shadow-dark);
+    }
+    .header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    .header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+
+    /* --- Tab Navigation --- */
+    .tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+    .tab-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: #fff;
+        color: var(--c-primary);
+        border: 2px solid var(--c-primary);
+        border-radius: 50px;
+        margin: 5px;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-light);
+    }
+    .tab-button:hover, .tab-button.active {
+        background-color: var(--c-primary);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-dark);
+    }
+
+    /* --- Tab Content --- */
+    .tab-content {
+        display: none;
+        animation: fadeIn 0.5s;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Content Grid & Cards --- */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+    .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-light);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-dark);
+    }
+    .card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--c-primary);
+        margin-top: 0;
+        border-bottom: 2px solid var(--c-accent);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .card .icon {
+        font-size: 2.5rem;
+        color: var(--c-accent);
+        margin-right: 15px;
+        vertical-align: middle;
+    }
+
+    /* --- Tables --- */
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .data-table th, .data-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    .data-table th {
+        background-color: var(--c-primary);
+        color: white;
+        font-weight: 600;
+    }
+    .data-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .data-table tr:hover {
+        background-color: #e9e9e9;
+    }
+    .data-table .value {
+        font-weight: 600;
+        color: var(--c-secondary);
+    }
+
+    /* --- Special Elements --- */
+    .highlight {
+        background-color: #fff3cd;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 5px solid var(--c-accent);
+    }
+    .calculator-section {
+        background: var(--c-dark);
+        color: white;
+        padding: 25px;
+        border-radius: var(--border-radius);
+        text-align: center;
+    }
+    .calculator-section a {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--c-accent);
+        color: var(--c-dark);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 50px;
+        margin-top: 15px;
+        transition: background-color 0.3s;
+    }
+    .calculator-section a:hover {
+        background-color: #ffdb4d;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+        body { padding: 15px; }
+        .header h1 { font-size: 2rem; }
+        .header p { font-size: 1rem; }
+        .tab-button { padding: 12px 20px; font-size: 1rem; }
+        .grid-container { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Your Swiss Pension System Deep Dive</h1>
+    <p>All you need to know about your retirement in Switzerland. Simplified & Interactive.</p>
+</div>
+
+<div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'Pillar1')">🏛️ Pillar 1 (OASI/AHV)</button>
+    <button class="tab-button" onclick="openTab(event, 'Pillar2')">🏢 Pillar 2 (BVG/LPP)</button>
+    <button class="tab-button" onclick="openTab(event, 'Pillar3')">💡 Pillar 3 (Private)</button>
+</div>
+
+<div id="Pillar1" class="tab-content active">
+    <div class="grid-container">
+        <div class="card">
+            <h3><span class="icon">📜</span>What is it?</h3>
+            <p>Pillar 1 is the state-run Old-Age and Survivors' Insurance (OASI/AHV). It's the foundation of the Swiss pension system, designed to cover your essential living costs in retirement.</p>
+            <ul>
+                <li><strong>System:</strong> Pay-as-you-go. Today's workers pay for today's retirees.</li>
+                <li><strong>Goal:</strong> Secure basic needs.</li>
+                <li><strong>Principle:</strong> Social solidarity. High earners contribute on their full salary to support the system.</li>
+                <li><strong>Mandatory:</strong> Yes, for almost everyone living or working in Switzerland.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3><span class="icon">💰</span>Contributions</h3>
+            <p>Contributions are a percentage of your gross salary, with no upper limit (cap), which is a key difference from many other countries.</p>
+            <ul>
+                <li><strong>Total Rate (OASI/DI/IC):</strong> 10.6% of gross income.</li>
+                <li><strong>Employee Share:</strong> 5.3% (deducted from your pay).</li>
+                <li><strong>Employer Share:</strong> 5.3% (paid on your behalf).</li>
+                <li><strong>Tax:</strong> Your contributions are tax-deductible.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3><span class="icon">📅</span>Retirement & Benefits</h3>
+            <p>The pension you receive depends on your contribution years and average income.</p>
+            <ul>
+                <li><strong>Full Pension:</strong> Requires a complete contribution history (e.g., 44 years for men). Missing a year results in a ~2.3% permanent reduction.</li>
+                <li><strong>Reference Age (as of 2025):</strong>
+                    <ul>
+                        <li>Men: 65 years.</li>
+                        <li>Women: The age is increasing from 64 to 65. For a woman born in 1961, it's 64 years and 3 months.</li>
+                    </ul>
+                </li>
+                <li><strong>Flexibility:</strong> You can draw your pension 1-2 years early (with a lifelong reduction of 6.8% per year) or defer it up to 5 years (for a higher pension).</li>
+            </ul>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+            <h3><span class="icon">📊</span>Key Figures (2025)</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value (CHF)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minimum Full Pension (Annual)</td>
+                        <td class="value">15,060 </td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Full Pension (Annual)</td>
+                        <td class="value">30,240 </td>
+                    </tr>
+                    <tr>
+                        <td>Required Average Income for Max Pension</td>
+                        <td class="value">~90,720 </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Married Couple's Cap (Annual)</strong></td>
+                        <td class="value"><strong>45,360</strong> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="highlight">
+                <strong>The "Marriage Penalty":</strong> A married couple's combined pension is capped at 150% of the maximum individual pension (CHF 45,360). If two individuals each earning the maximum pension marry, their combined benefit is reduced from CHF 60,480 to CHF 45,360.
+            </div>
+        </div>
+
+        <div class="card calculator-section" style="grid-column: 1 / -1;">
+            <h3>Estimate Your Pillar 1 Pension</h3>
+            <p>Official projections are the most accurate. You can request an individual account (IA) statement to check for contribution gaps.</p>
+            <a href="https://www.ahv-iv.ch/en/Contacts/Information-Center-OASI-DI" target="_blank" rel="noopener">Request Your OASI Statement</a>
+        </div>
+    </div>
+</div>
+
+<div id="Pillar2" class="tab-content">
+    <div class="grid-container">
+        <div class="card">
+            <h3><span class="icon">📜</span>What is it?</h3>
+            <p>Pillar 2 is your occupational pension (BVG/LPP), funded by you and your employer. Its goal is to combine with Pillar 1 to allow you to maintain your accustomed standard of living.</p>
+            <ul>
+                <li><strong>System:</strong> Fully funded. Your contributions go into a personal account.</li>
+                <li><strong>Mandatory for:</strong> Employees earning over CHF 22,680 per year (as of 2025).</li>
+                <li><strong>Structure:</strong> It has two parts: a legally required <strong>Mandatory</strong> portion and a voluntary <strong>Super-Mandatory</strong> portion offered by the employer.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3><span class="icon">💰</span>Contributions & Insured Salary</h3>
+            <p>Contributions are a percentage of your "coordinated salary" and increase with age.</p>
+            <ul>
+                <li><strong>Coordinated Salary:</strong> Your gross salary minus a coordination deduction (CHF 26,460 in 2025).</li>
+                <li><strong>Salary Cap (Mandatory):</strong> Only salary up to CHF 90,720 is insured in the mandatory plan. Income above this is only covered by a good super-mandatory plan.</li>
+                <li><strong>Employer's Role:</strong> Must contribute at least as much as the employee. Many contribute more.</li>
+            </ul>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Age Bracket</th>
+                        <th>Minimum Savings Credit Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-34</td><td class="value">7% </td></tr>
+                    <tr><td>35-44</td><td class="value">10% </td></tr>
+                    <tr><td>45-54</td><td class="value">15% </td></tr>
+                    <tr><td>55-65</td><td class="value">18% </td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+            <h3><span class="icon">🔄</span>The Conversion Rate Dilemma</h3>
+            <p>At retirement, your total saved capital is converted into a lifelong pension using a conversion rate. This is one of the most critical and misunderstood parts of the system.</p>
+            <p><strong>Formula:</strong> Annual Pension = Accumulated Capital × Conversion Rate.</p>
+            <div class="highlight">
+                <strong>The "Split Rate" Reality:</strong> The law mandates a <strong>6.8%</strong> conversion rate for the <strong>mandatory</strong> portion of your savings. However, this rate is actuarially too high for pension funds to sustain.
+                <br><br>
+                Therefore, funds apply a much lower rate to the (often larger) <strong>super-mandatory</strong> portion. This results in a "blended" effective rate that is typically between <strong>4.5% and 5.5%</strong>, significantly lowering the final pension you receive.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3><span class="icon">💸</span>Payout Options</h3>
+            <p>At retirement, you have a critical choice to make:</p>
+            <ul>
+                <li><strong>Lifelong Annuity (Pension):</strong> A guaranteed monthly payment for life.</li>
+                <li><strong>Full Lump-Sum:</strong> Withdraw all your capital at once. Taxed at a reduced rate.</li>
+                <li><strong>Combination:</strong> Take a portion as a lump sum (e.g., 25%) and convert the rest to an annuity.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3><span class="icon">📈</span>Voluntary Buy-Ins</h3>
+            <p>If you have a pension gap (e.g., from starting your career late in Switzerland), you can make voluntary "buy-ins".</p>
+            <ul>
+                <li><strong>Massive Tax Advantage:</strong> Buy-ins are fully deductible from your taxable income in the year they are made.</li>
+                <li><strong>How to Know:</strong> Your potential buy-in amount is listed on your annual pension fund certificate.</li>
+                <li><strong>Restriction:</strong> Capital from a buy-in is blocked for three years before it can be withdrawn as a lump sum.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3><span class="icon">✈️</span>Leaving Switzerland?</h3>
+            <p>What happens to your Pillar 2 funds depends on your destination.</p>
+            <ul>
+                <li><strong>Moving to EU/EFTA:</strong> The mandatory portion is blocked until retirement. The super-mandatory portion can be withdrawn.</li>
+                <li><strong>Moving outside EU/EFTA:</strong> The entire amount can be withdrawn as a lump sum.</li>
+                <li><strong>Tax Strategy:</strong> Before leaving, transfer funds to a vested benefits foundation in a low-tax canton (like Schwyz) to significantly reduce withholding tax on the payout.</li>
+            </ul>
+        </div>
+
+        <div class="card calculator-section" style="grid-column: 1 / -1;">
+            <h3>Check Your Pillar 2 Details</h3>
+            <p>Your annual pension certificate is the most important document. It shows your insured salary, projected pension, and buy-in potential. Many pension funds also offer online portals with simulators.</p>
+            <a href="https://www.google.com/search?q=swiss+pension+fund+calculator" target="_blank" rel="noopener">Find a Pension Calculator (General Search)</a>
+            <small style="display:block; margin-top:10px;">Reference: Your employer's pension fund (e.g., AXA, Swiss Life, PUBLICA) will have the most accurate tools for you.</small>
+        </div>
+    </div>
+</div>
+
+<div id="Pillar3" class="tab-content">
+    <div class="grid-container">
+        <div class="card" style="grid-column: 1 / -1;">
+             <h3><span class="icon">📜</span>What is it?</h3>
+             <p>Pillar 3 is your private, voluntary pension savings. It's designed to close the personal pension gap left by Pillars 1 & 2 to ensure you can maintain your desired lifestyle. It's split into two types: 3a and 3b.</p>
+        </div>
+
+        <div class="card" style="background-color: #e6f7ff;">
+            <h3><span class="icon">👑</span>Pillar 3a (The Smart Saver)</h3>
+            <p>Pillar 3a is a "tied" or "restricted" pension account with huge tax advantages. It's a foundational savings strategy for almost everyone in Switzerland.</p>
+            <ul>
+                <li><strong>Annual Contribution Limit (2025):</strong>
+                    <ul>
+                        <li>With a Pillar 2 fund: <strong>CHF 7,258</strong>.</li>
+                        <li>Without a Pillar 2 fund: 20% of net income, up to <strong>CHF 36,288</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Triple Tax Advantage:</strong>
+                    <ol>
+                       <li><strong>Deductible:</strong> Contributions are fully deductible from your taxable income.</li>
+                       <li><strong>Tax-Free Growth:</strong> No wealth or income tax on assets while they grow.</li>
+                       <li><strong>Reduced Payout Tax:</strong> Withdrawals are taxed at a low, one-time capital benefits rate.</li>
+                    </ol>
+                </li>
+                <li><strong>Withdrawal:</strong> Funds are tied until 5 years before retirement, or for specific events like buying a home, starting a business, or leaving Switzerland.</li>
+            </ul>
+            <div class="highlight">
+                <strong>Pro Tip: Staggered Payouts.</strong> Open a new 3a account every 5-7 years. This allows you to withdraw from them in different tax years during retirement, breaking up a large sum into smaller ones and significantly reducing your total tax bill due to the progressive tax rate.
+            </div>
+        </div>
+
+        <div class="card" style="background-color: #fff0f0;">
+            <h3><span class="icon">🚀</span>Pillar 3b (The Flexible Investor)</h3>
+            <p>Pillar 3b is the "unrestricted" or "flexible" pillar. It's not a specific product, but a label for all your other private assets and investments.</p>
+            <ul>
+                <li><strong>Contribution Limit:</strong> None.</li>
+                <li><strong>Flexibility:</strong> You can access your money anytime, for any reason.</li>
+                <li><strong>Tax Treatment:</strong>
+                    <ul>
+                        <li>Contributions are <strong>not</strong> tax-deductible.</li>
+                        <li>Assets are subject to annual wealth tax.</li>
+                        <li>Investment income (dividends, interest) is taxable.</li>
+                        <li><strong>Key Advantage:</strong> Capital gains from selling private assets (like stocks) are generally <strong>tax-free</strong> for non-professional traders.</li>
+                    </ul>
+                </li>
+                <li><strong>Primary Goal:</strong> General wealth accumulation after you've maxed out Pillar 2 buy-ins and Pillar 3a contributions.</li>
+            </ul>
+        </div>
+
+         <div class="card calculator-section" style="grid-column: 1 / -1;">
+            <h3>Plan Your Private Savings</h3>
+            <p>Multiple Swiss banks and financial service providers offer calculators to see the tax savings from Pillar 3a and project your wealth growth.</p>
+            <a href="https://www.google.com/search?q=pillar+3a+switzerland+calculator" target="_blank" rel="noopener">Find a Pillar 3a Calculator (General Search)</a>
+            <small style="display:block; margin-top:10px;">Reference: Check offerings from providers like VIAC, frankly, UBS, or your cantonal bank.</small>
+        </div>
+    </div>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    // Hide all tab content
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Deactivate all tab buttons
+    tablinks = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the selected tab and activate the button
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
