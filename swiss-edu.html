@@ -367,37 +367,7 @@
             opacity: 0.9;
         }
 
-        /* --- Desktop and Tablet Styles (Horizontal Layout) --- */
-        @media (min-width: 768px) {
-            .pathway-timeline {
-                flex-direction: row;
-                justify-content: space-between;
-            }
 
-            .pathway-step {
-                width: 23%; /* Distribute width among 4 items */
-                min-height: 150px;
-                margin-bottom: 0; /* Remove vertical margin */
-                padding: 20px 15px;
-            }
-
-            .pathway-container h4 {
-                font-size: 32px;
-                margin-bottom: 60px;
-            }
-
-            /* Arrow connectors for desktop view */
-            .pathway-step:not(:last-child)::after {
-                content: '→';
-                position: absolute;
-                right: -24px; /* Position arrow between cards */
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 28px;
-                font-weight: bold;
-                color: #bdc3c7;
-            }
-        } 
     </style>
 </head>
 <body>
