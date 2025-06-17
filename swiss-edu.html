@@ -346,6 +346,26 @@
             font-size: 14px;
             opacity: 0.9;
         }
+   /* Make tables horizontally scrollable on small screens */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling for iOS */
+}
+
+.table-responsive table {
+  width: 100%;
+  min-width: 600px; /* adjust as needed for your tables */
+  border-collapse: collapse;
+}
+
+/* Optional: Only apply on small screens */
+@media (max-width: 600px) {
+  .table-responsive {
+    margin-bottom: 1em;
+  }
+}   
+   
     </style>
 </head>
 
