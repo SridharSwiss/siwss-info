@@ -34,7 +34,7 @@
             margin: 0;
             line-height: 1.6;
         }
-       .container {
+      .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 20px;
@@ -59,7 +59,7 @@
             max-width: 800px;
             margin: 15px auto 0;
         }
-       .tabs {
+      .tabs {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -72,7 +72,7 @@
             top: 10px;
             z-index: 1000;
         }
-       .tab-button {
+      .tab-button {
             padding: 12px 25px;
             cursor: pointer;
             background-color: transparent;
@@ -87,27 +87,27 @@
             align-items: center;
             gap: 8px;
         }
-       .tab-button:hover {
+      .tab-button:hover {
             background-color: rgba(25, 118, 210, 0.05);
         }
-       .tab-button.active {
+      .tab-button.active {
             background-color: var(--primary-main);
             color: white;
             box-shadow: 0 4px 10px rgba(25, 118, 210, 0.4);
             transform: translateY(-2px);
         }
-       .tab-content {
+      .tab-content {
             display: none;
             animation: fadeIn 0.6s ease-in-out;
         }
-       .tab-content.active {
+      .tab-content.active {
             display: block;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-       .card {
+      .card {
             background-color: var(--bg-white);
             border-radius: 16px;
             padding: 30px;
@@ -116,7 +116,7 @@
             border: 1px solid var(--border-color);
             overflow: hidden;
         }
-       .card.executive-summary {
+      .card.executive-summary {
             background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
             border-left: 5px solid var(--primary-main);
         }
@@ -174,53 +174,53 @@
             color: var(--primary-dark);
             text-decoration: underline;
         }
-       .assessment-grid {
+      .assessment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 25px;
         }
-       .assessment-card {
+      .assessment-card {
             padding: 25px;
             border-radius: 12px;
             background-color: var(--bg-light);
         }
-       .assessment-card h4 {
+      .assessment-card h4 {
             margin-top: 0;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-       .assessment-card.merit { border-left: 5px solid var(--accent-green); }
-       .assessment-card.demerit { border-left: 5px solid var(--accent-red); }
-       .assessment-card.merit h4 { color: var(--accent-green); }
-       .assessment-card.demerit h4 { color: var(--accent-red); }
+      .assessment-card.merit { border-left: 5px solid var(--accent-green); }
+      .assessment-card.demerit { border-left: 5px solid var(--accent-red); }
+      .assessment-card.merit h4 { color: var(--accent-green); }
+      .assessment-card.demerit h4 { color: var(--accent-red); }
         ul {
             padding-left: 20px;
             list-style-type: '✓ ';
         }
-       .demerit ul { list-style-type: '✗ '; }
+      .demerit ul { list-style-type: '✗ '; }
         li { margin-bottom: 12px; padding-left: 8px; }
-       .infographic-container {
+      .infographic-container {
             margin: 40px 0;
             padding: 30px;
             background: linear-gradient(145deg, var(--bg-white), var(--bg-light));
             border-radius: 16px;
             text-align: center;
         }
-       .infographic-container svg {
+      .infographic-container svg {
             width: 100%;
             max-width: 1000px;
             height: auto;
             font-family: 'Inter', sans-serif;
         }
-       .stat-grid {
+      .stat-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
             margin-top: 25px;
         }
-       .stat-card {
+      .stat-card {
             background: var(--bg-white);
             padding: 25px;
             border-radius: 12px;
@@ -229,22 +229,22 @@
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
         }
-       .stat-card:hover {
+      .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
-       .stat-card.value {
+      .stat-card.value {
             font-size: 3rem;
             font-weight: 800;
             color: var(--primary-dark);
             line-height: 1.2;
         }
-       .stat-card.label {
+      .stat-card.label {
             font-size: 1rem;
             color: var(--text-light);
             margin-top: 10px;
         }
-       .resource-list a {
+      .resource-list a {
             display: block;
             padding: 18px;
             background-color: var(--bg-light);
@@ -253,31 +253,24 @@
             transition: all 0.3s ease;
             font-weight: 600;
         }
-       .resource-list a:hover {
+      .resource-list a:hover {
             background-color: #e3f2fd;
             transform: translateX(8px);
             text-decoration: none;
             color: var(--primary-dark);
         }
-       .citation {
-            font-size: 0.8em;
-            color: #9E9E9E;
-            display: inline-block;
-            margin-left: 4px;
-            font-weight: 400;
-        }
-       .key-insight {
+      .key-insight {
             background-color: #FFF8E1;
             border-left: 5px solid var(--accent-gold);
             padding: 20px;
             margin: 25px 0;
             border-radius: 8px;
         }
-       .key-insight p { margin: 0; }
-       .key-insight strong { color: #8D6E63; }
+      .key-insight p { margin: 0; }
+      .key-insight strong { color: #8D6E63; }
         @media (max-width: 992px) {
-           .tabs { flex-direction: column; align-items: stretch; position: static; border-radius: 16px; }
-           .tab-button { width: auto; text-align: left; }
+         .tabs { flex-direction: column; align-items: stretch; position: static; border-radius: 16px; }
+         .tab-button { width: auto; text-align: left; }
         }
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
@@ -309,11 +302,15 @@
             <div id="Overview" class="tab-content active">
                 <div class="card executive-summary">
                     <h2>Strategic Executive Summary</h2>
-                    <p>The Canton of Zurich's education system is a global benchmark, defined by three core strategic pillars: **uncompromising quality**, a **powerful dual-track (VET/Academic) structure**, and its hallmark principle of **"permeability" (`Durchlässigkeit`)**. This design ensures that no educational choice is a dead end, providing multiple, fluid pathways to the highest levels of academic and professional success. Governed by the cantonal `Bildungsdirektion` [1, 2] within a federal framework from SERI [3, 4], the system is overwhelmingly public (95% of students) [2, 5, 6] and exceptionally well-funded (5.7% of GDP).[3] The key to navigating this system is not to find the single "best" path, but to leverage its flexibility to find the optimal path for each individual's talents and ambitions.</p>
+                    <p>The Canton of Zurich's education system is a global benchmark, defined by three core strategic pillars: **uncompromising quality**, a **powerful dual-track (VET/Academic) structure**, and its hallmark principle of **"permeability" (`Durchlässigkeit`)**. This design ensures that no educational choice is a dead end, providing multiple, fluid pathways to the highest levels of academic and professional success. Governed by the cantonal `Bildungsdirektion` within a federal framework from SERI, the system is overwhelmingly public (95% of students) and exceptionally well-funded (5.7% of GDP). The key to navigating this system is not to find the single "best" path, but to leverage its flexibility to find the optimal path for each individual's talents and ambitions.</p>
                 </div>
                 <div class="card">
                     <h2>The Zurich Education Flywheel: A System in Motion</h2>
-                    <p>The defining characteristic of the Zurich system is not merely the excellence of its individual academic and vocational tracks, but the sophisticated and intentional relationship between them. The system's design makes a fundamental division of students after primary or lower secondary school, which could risk creating a rigid, two-tiered society.<span class="citation">[5, 7]</span> However, Switzerland's economic vitality and exceptionally low youth unemployment are widely credited to the strength of its VET system, indicating that the vocational path is not a subordinate option but a co-equal pillar of the economy and society.<span class="citation">[8, 9]</span> To ensure this parity and prevent educational dead ends, the system has built-in mechanisms of "permeability." Qualifications like the Vocational Baccalaureate (`Berufsmaturität`) and the `Passerelle` university entrance exam act as bridges, allowing students to move between vocational and academic tracks at various stages.<span class="citation">[10]</span> Therefore, the system is best understood as an interconnected network of pathways rather than a simple fork in the road. This design alleviates the pressure of early, high-stakes decisions and provides reassurance that multiple routes can lead to the highest levels of education and professional success.</p>
+                    <p>The defining characteristic of the Zurich system is not merely the excellence of its individual academic and vocational tracks, but the sophisticated and intentional relationship between them. The system's design makes a fundamental division of students after primary or lower secondary school, which could risk creating a rigid, two-tiered society.</p>
+                    <p>However, Switzerland's economic vitality and exceptionally low youth unemployment are widely credited to the strength of its VET system, indicating that the vocational path is not a subordinate option but a **co-equal pillar of the economy and society**. To ensure this parity and prevent educational dead ends, the system has built-in mechanisms of "permeability." Qualifications like the **Vocational Baccalaureate (`Berufsmaturität`)** and the **`Passerelle` university entrance exam** act as bridges, allowing students to move between vocational and academic tracks at various stages.</p>
+                    <div class="key-insight">
+                        <p><strong>Key Takeaway:</strong> The system is best understood as an **interconnected network of pathways** rather than a simple fork in the road. This design alleviates the pressure of early, high-stakes decisions and provides reassurance that multiple routes can lead to the highest levels of education and professional success.</p>
+                    </div>
                     
                     <div class="infographic-container">
                         <h4>Zurich Education Flywheel</h4>
@@ -406,10 +403,10 @@
                     <p>The 11-year compulsory education journey in Zurich is free and lays the groundwork for all future paths. It's divided into Kindergarten, Primary School, and Lower Secondary School.</p>
                     
                     <h3>Deep Dive: The First Strategic Crossroads (Age 12)</h3>
-                    <p>Around age 12, after 6th grade, students face their first major educational fork in the road. The decision is based on academic performance, teacher recommendations, and for the direct academic path, a crucial entrance exam.<span class="citation">[5, 11, 12]</span></p>
+                    <p>Around age 12, after 6th grade, students face their first major educational fork in the road. The decision is based on academic performance, teacher recommendations, and for the direct academic path, a crucial entrance exam.</p>
 
                     <h4>Option A: The Early Academic Route – <code>Langgymnasium</code></h4>
-                    <p>A six-year academic high school starting after 6th grade, leading directly to the university entrance qualification (<code>Matura</code>).<span class="citation">[10, 5, 7]</span> Admission is highly competitive and requires passing the Central Entrance Exam (ZAP).<span class="citation">[7, 13]</span></p>
+                    <p>A six-year academic high school starting after 6th grade, leading directly to the university entrance qualification (<code>Matura</code>). Admission is highly competitive and requires passing the Central Entrance Exam (ZAP).</p>
                     <div class="assessment-grid">
                         <div class="assessment-card merit">
                             <h4><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Merits</h4>
@@ -422,14 +419,14 @@
                             <h4><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> Demerits</h4>
                             <ul>
                                 <li>Places significant academic and psychological pressure on 12-year-olds.</li>
-                                <li>Can favor children from privileged backgrounds with access to private tutoring.<span class="citation">[9, 14]</span></li>
+                                <li>Can favor children from privileged backgrounds with access to private tutoring.</li>
                                 <li>May disadvantage "late bloomers" or those with non-academic talents.</li>
                             </ul>
                         </div>
                     </div>
 
                     <h4>Option B: The Standard Route – <code>Sekundarschule</code></h4>
-                    <p>Most students attend a three-year <code>Sekundarschule</code>, which streams students into different ability levels (e.g., Abteilung A, B).<span class="citation">[12]</span> This path keeps more options open and includes vocational orientation to help students decide on their next steps at age 15.<span class="citation">[7]</span></p>
+                    <p>Most students attend a three-year <code>Sekundarschule</code>, which streams students into different ability levels (e.g., Abteilung A, B). This path keeps more options open and includes vocational orientation to help students decide on their next steps at age 15.</p>
                     <div class="assessment-grid">
                         <div class="assessment-card merit">
                             <h4><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Merits</h4>
@@ -496,11 +493,19 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p class="citation" style="font-size: 0.9em; text-align: right;">Sources: [10, 6, 8, 9, 15, 16]</p>
                     
                     <div class="key-insight">
-                        <p><strong>Key Insight:</strong> The VET path is not a "lesser" option. It is a co-equal, highly respected pillar of the Swiss economy, chosen by ~66% of students.<span class="citation">[6, 8]</span> Many of Switzerland's top executives and political leaders began with a VET apprenticeship, highlighting its potential for high-level career trajectories.<span class="citation">[8, 16]</span></p>
+                        <p><strong>Key Insight:</strong> The VET path is not a "lesser" option. It is a co-equal, highly respected pillar of the Swiss economy, chosen by ~66% of students. Many of Switzerland's top executives and political leaders began with a VET apprenticeship, highlighting its potential for high-level career trajectories.</p>
                     </div>
+
+                    <h3>The Permeability Principle: Bridging the VET-Academic Divide 🌉</h3>
+                    <p>A core strength of the Swiss education system is its principle of permeability, which ensures that no educational path is a dead end. This is most powerfully demonstrated by the clear, structured pathway that allows graduates from the vocational track to access the highest levels of academic education at traditional universities.</p>
+                    <p>The journey involves two key qualifications:</p>
+                    <ul>
+                        <li><strong>The Vocational Baccalaureate (`Berufsmaturität` - BM):</strong> For motivated apprentices, the BM supplements their vocational training with an extended general education curriculum. It can be earned either during the apprenticeship (BM1) or after its completion (BM2). The BM is the primary key that unlocks tertiary education, granting direct, exam-free access to Universities of Applied Sciences (UAS/FH) in a related field.</li>
+                        <li><strong>The `Passerelle` Supplementary Exam:</strong> This is the ultimate bridge to traditional universities. Holders of a Vocational Baccalaureate (or a Specialized Baccalaureate from an FMS) can undertake a one-year intensive supplementary course. Successfully passing the final `Passerelle` exam grants a qualification equivalent to the academic `Matura`, opening the door to all Swiss universities and the prestigious Federal Institutes of Technology (ETH Zurich).</li>
+                    </ul>
+                    <p>This step-by-step process ensures that a student who chooses the practical VET path at age 15 retains the option to pursue a PhD at a top research university later in their career, embodying the system's flexibility and commitment to lifelong learning opportunities.</p>
 
                     <h3>Infographic: Permeability Pathways</h3>
                     <div class="infographic-container">
@@ -579,13 +584,12 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p class="citation" style="font-size: 0.9em; text-align: right;">Sources: [10, 6, 17, 18, 19, 20]</p>
 
                     <h3>Deep Dive: Doctoral Studies (PhD)</h3>
-                    <p>A doctorate represents the highest academic qualification. In Zurich, both ETH Zurich and the University of Zurich offer world-class doctoral programs where candidates are typically employed as salaried research or teaching assistants.<span class="citation">[21, 22]</span></p>
+                    <p>A doctorate represents the highest academic qualification. In Zurich, both ETH Zurich and the University of Zurich offer world-class doctoral programs where candidates are typically employed as salaried research or teaching assistants.</p>
                     <ul>
-                        <li><strong>ETH Zurich:</strong> The program is centered on an independent research project, supplemented by 12 ECTS credits of coursework and teaching duties, leading to a "Doctor of Sciences (Dr. sc. ETH Zurich)".<span class="citation">[21, 23]</span> Admission requires an excellent Master's degree; candidates often apply for open positions or contact professors directly.<span class="citation">[21, 24]</span></li>
-                        <li><strong>University of Zurich (UZH):</strong> Offers individual doctorates or structured programs. The process involves securing a supervisor and then applying for formal matriculation.<span class="citation">[25, 26, 27]</span> UZH is known for its vast array of programs and interdisciplinary graduate schools.<span class="citation">[28, 29, 30]</span></li>
+                        <li><strong>ETH Zurich:</strong> The program is centered on an independent research project, supplemented by 12 ECTS credits of coursework and teaching duties, leading to a "Doctor of Sciences (Dr. sc. ETH Zurich)". Admission requires an excellent Master's degree; candidates often apply for open positions or contact professors directly.</li>
+                        <li><strong>University of Zurich (UZH):</strong> Offers individual doctorates or structured programs. The process involves securing a supervisor and then applying for formal matriculation. UZH is known for its vast array of programs and interdisciplinary graduate schools.</li>
                     </ul>
                 </div>
             </div>
@@ -596,20 +600,20 @@
                     <p>While the public system is dominant, a vibrant private school sector offers alternatives. The public system itself is in constant motion, shaped by key policy debates.</p>
 
                     <h3>The Private & International School Option</h3>
-                    <p>For families with specific pedagogical needs or those requiring curriculum continuity (e.g., IB Diploma), private and international schools are a strong, albeit expensive, option.<span class="citation">[2, 4, 31, 32]</span></p>
+                    <p>For families with specific pedagogical needs or those requiring curriculum continuity (e.g., IB Diploma), private and international schools are a strong, albeit expensive, option.</p>
                     <div class="assessment-grid">
                         <div class="assessment-card merit">
                             <h4><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Merits</h4>
                             <ul>
                                 <li>Curriculum continuity for mobile families (e.g., IB).</li>
                                 <li>Instruction in English, simplifying global university applications.</li>
-                                <li>Often smaller class sizes and extensive support services.<span class="citation">[33, 34]</span></li>
+                                <li>Often smaller class sizes and extensive support services.</li>
                             </ul>
                         </div>
                         <div class="assessment-card demerit">
                             <h4><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> Demerits</h4>
                             <ul>
-                                <li>Extremely high cost (CHF 25k-40k+ per year, plus significant one-time fees).<span class="citation">[31, 32, 35, 36, 37]</span></li>
+                                <li>Extremely high cost (CHF 25k-40k+ per year, plus significant one-time fees).</li>
                                 <li>Risk of an "expat bubble" with limited local integration.</li>
                                 <li>Difficult to transition back into the Swiss public system later.</li>
                             </ul>
@@ -619,9 +623,9 @@
                     <h3>Horizon Scan: Key Policy Debates</h3>
                     <p>The Zurich education system is shaped by three interconnected strategic debates:</p>
                     <ol>
-                        <li><strong>The Equity vs. Excellence Debate (Early Selection):</strong> This is the most prominent issue. Critics argue early selection at age 12 reinforces social inequality.<span class="citation">[9, 14, 38]</span> Proponents argue the high-quality, permeable VET system mitigates this, making the selection less high-stakes than elsewhere.<span class="citation">[9]</span></li>
-                        <li><strong>The Digital Transformation:</strong> Zurich is proactively integrating digital tools and literacy (`Medien und Informatik`) into the curriculum at all levels, including issuing guidelines for AI in schools.<span class="citation">[39, 40, 41]</span></li>
-                        <li><strong>The Future of VET ("Academisation"):</strong> A subtle trend is the strengthening of academic pathways from vocational training (e.g., promoting the `Berufsmaturität`). This enhances VET's prestige but raises concerns about diluting its core practical strength.<span class="citation">[42]</span></li>
+                        <li><strong>The Equity vs. Excellence Debate (Early Selection):</strong> This is the most prominent issue. Critics argue early selection at age 12 reinforces social inequality. Proponents counter that the high-quality, permeable VET system mitigates this, making the selection less high-stakes than elsewhere.</li>
+                        <li><strong>The Digital Transformation:</strong> Zurich is proactively integrating digital tools and literacy (`Medien und Informatik`) into the curriculum at all levels, including issuing guidelines for AI in schools.</li>
+                        <li><strong>The Future of VET ("Academisation"):</strong> A subtle trend is the strengthening of academic pathways from vocational training (e.g., promoting the `Berufsmaturität`). This enhances VET's prestige but raises concerns about diluting its core practical strength.</li>
                     </ol>
                 </div>
             </div>
@@ -634,19 +638,19 @@
                     <div class="stat-grid">
                         <div class="stat-card">
                             <div class="value">~66%</div>
-                            <div class="label">of school-leavers choose the VET / Apprenticeship path.<span class="citation">[6]</span></div>
+                            <div class="label">of school-leavers choose the VET / Apprenticeship path.</div>
                         </div>
                         <div class="stat-card">
                             <div class="value">90.7%</div>
-                            <div class="label">of young adults obtain an upper secondary qualification.<span class="citation">[43]</span></div>
+                            <div class="label">of young adults obtain an upper secondary qualification.</div>
                         </div>
                         <div class="stat-card">
                             <div class="value">59%+</div>
-                            <div class="label">of Zurich's working-age population holds a university-level degree.<span class="citation">[44]</span></div>
+                            <div class="label">of Zurich's working-age population holds a university-level degree.</div>
                         </div>
                         <div class="stat-card">
                             <div class="value">82%</div>
-                            <div class="label">Employment rate for adults with an upper secondary VET qualification.<span class="citation">[15]</span></div>
+                            <div class="label">Employment rate for adults with an upper secondary VET qualification.</div>
                         </div>
                     </div>
 
@@ -668,7 +672,7 @@
                             <text x="384.75" y="108" text-anchor="middle" class="percent">46.0%</text>
                             <text x="384.75" y="150" text-anchor="middle" class="label">Tertiary (Professional/Higher Ed)</text>
                             
-                            <text x="250" y="200" text-anchor="middle" font-size="10" fill="#888">Source: FSO, 2023<span class="citation">[43]</span></text>
+                            <text x="250" y="200" text-anchor="middle" font-size="10" fill="#888">Source: FSO, 2023</text>
                         </svg>
                     </div>
                 </div>
