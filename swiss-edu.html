@@ -284,6 +284,103 @@
                 height: 133.33%;
             }
         }
+               @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        /* Main container styling */
+        .pathway-container {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .pathway-container h4 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        /* Timeline structure */
+        .pathway-timeline {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Individual step styling */
+        .pathway-step {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 30px; /* Space between cards on mobile */
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pathway-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Color schemes for different steps */
+        .step-primary {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .step-secondary {
+            background: linear-gradient(135deg, #f1c40f, #f39c12);
+        }
+
+        .step-content h5 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .step-content p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* --- Desktop and Tablet Styles (Horizontal Layout) --- */
+        @media (min-width: 768px) {
+            .pathway-timeline {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .pathway-step {
+                width: 23%; /* Distribute width among 4 items */
+                min-height: 150px;
+                margin-bottom: 0; /* Remove vertical margin */
+                padding: 20px 15px;
+            }
+
+            .pathway-container h4 {
+                font-size: 32px;
+                margin-bottom: 60px;
+            }
+
+            /* Arrow connectors for desktop view */
+            .pathway-step:not(:last-child)::after {
+                content: '→';
+                position: absolute;
+                right: -24px; /* Position arrow between cards */
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 28px;
+                font-weight: bold;
+                color: #bdc3c7;
+            }
+        } 
     </style>
 </head>
 <body>
@@ -521,31 +618,36 @@
                     <p>This step-by-step process ensures that a student who chooses the practical VET path at age 15 retains the option to pursue a PhD at a top research university later in their career, embodying the system's flexibility and commitment to lifelong learning opportunities.</p>
 
                     <h3>Infographic: Permeability Pathways</h3>
-                    <div class="infographic-container">
-                        <h4>How to Bridge the Gap: From VET to University</h4>
-                        <svg viewBox="0 0 800 300" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-                            <style>.label{font-size: 14px; font-weight: 600; fill: #333;}.desc{font-size: 12px; fill: #666;}</style>
-                            <rect x="20" y="100" width="160" height="100" rx="10" fill="url(#grad-green)"/>
-                            <text x="100" y="140" text-anchor="middle" fill="white" font-weight="bold" font-size="16">1. VET Apprenticeship</text>
-                            <text x="100" y="165" text-anchor="middle" fill="white" font-size="12">Gain EFZ Diploma</text>
-                            <text x="100" y="180" text-anchor="middle" fill="white" font-size="12">& practical skills</text>
-                            <rect x="220" y="100" width="160" height="100" rx="10" fill="url(#grad-green)"/>
-                            <text x="300" y="140" text-anchor="middle" fill="white" font-weight="bold" font-size="16">2. Berufsmaturität</text>
-                            <text x="300" y="165" text-anchor="middle" fill="white" font-size="12">Access to UAS/FH</text>
-                             <text x="300" y="180" text-anchor="middle" fill="white" font-size="12">(Applied Sciences)</text>
-                            <rect x="420" y="100" width="160" height="100" rx="10" fill="url(#grad-gold)"/>
-                            <text x="500" y="140" text-anchor="middle" fill="white" font-weight="bold" font-size="16">3. Passerelle Exam</text>
-                            <text x="500" y="165" text-anchor="middle" fill="white" font-size="12">1-year intensive</text>
-                            <text x="500" y="180" text-anchor="middle" fill="white" font-size="12">supplementary course</text>
-                            <rect x="620" y="100" width="160" height="100" rx="10" fill="url(#grad-gold)"/>
-                            <text x="700" y="140" text-anchor="middle" fill="white" font-weight="bold" font-size="16">4. University / ETH</text>
-                            <text x="700" y="165" text-anchor="middle" fill="white" font-size="12">Full access to all</text>
-                            <text x="700" y="180" text-anchor="middle" fill="white" font-size="12">academic universities</text>
-                            <path d="M 180 150 L 220 150" stroke="#FFF" stroke-width="3" marker-end="url(#arrow)"/>
-                            <path d="M 380 150 L 420 150" stroke="#FFF" stroke-width="3" marker-end="url(#arrow)"/>
-                            <path d="M 580 150 L 620 150" stroke="#FFF" stroke-width="3" marker-end="url(#arrow)"/>
-                        </svg>
-                    </div>
+    <div class="pathway-container">
+        <h4>How to Bridge the Gap: From VET to University</h4>
+
+        <ol class="pathway-timeline">
+            <li class="pathway-step step-primary">
+                <div class="step-content">
+                    <h5>1. VET Apprenticeship</h5>
+                    <p>Gain EFZ Diploma & practical skills</p>
+                </div>
+            </li>
+            <li class="pathway-step step-primary">
+                <div class="step-content">
+                    <h5>2. Berufsmaturität</h5>
+                    <p>Access to UAS/FH (Applied Sciences)</p>
+                </div>
+            </li>
+            <li class="pathway-step step-secondary">
+                <div class="step-content">
+                    <h5>3. Passerelle Exam</h5>
+                    <p>1-year intensive supplementary course</p>
+                </div>
+            </li>
+            <li class="pathway-step step-secondary">
+                <div class="step-content">
+                    <h5>4. University / ETH</h5>
+                    <p>Full access to all academic universities</p>
+                </div>
+            </li>
+        </ol>
+    </div>
                 </div>
             </div>
 
