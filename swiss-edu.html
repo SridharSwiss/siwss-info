@@ -364,9 +364,16 @@
   .table-responsive {
     margin-bottom: 1em;
   }
-}   
-   
-    </style>
+} 
+@media (max-width: 600px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}        
+ </style>
 </head>
 
     <body>
